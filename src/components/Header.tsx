@@ -1,6 +1,7 @@
 
 import Link from 'next/link';
 import { UserButton, auth } from '@clerk/nextjs';
+import ThemeSwitcher from './ThemeSwitcher';
 
 
 const Header = async () => {
@@ -14,7 +15,9 @@ const Header = async () => {
             Clerk App
           </div>
         </Link>
-        
+        <div>
+        <ThemeSwitcher/>
+        </div>
       </div>
       <div className='flex items-center text-white'>
         {!userId && (
