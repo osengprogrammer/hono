@@ -5,7 +5,8 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { dark } from "@clerk/themes";
 import Header from "@/components/Header";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
-
+import DesignerContextProvider from "@/components/context/DesignerContext";
+import NextTopLoader from "nextjs-toploader";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -27,6 +28,8 @@ export default function RootLayout({
       >
         <html lang="en">
           <body>
+          <NextTopLoader />
+          <DesignerContextProvider>
             <ThemeProvider
               attribute="class"
               defaultTheme="dark"
@@ -36,6 +39,7 @@ export default function RootLayout({
               <Header />
               {children}
             </ThemeProvider>
+            </DesignerContextProvider>
           </body>
         </html>
       </ClerkProvider>
