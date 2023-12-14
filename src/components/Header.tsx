@@ -26,7 +26,7 @@ const Header = async () => {
               href='sign-in'
               className='text-gray-300 hover:text-white mr-4'
             >
-              Sign In
+              Login In
             </Link>
             <Link
               href='sign-up'
