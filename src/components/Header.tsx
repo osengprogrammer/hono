@@ -12,7 +12,7 @@ const Header = async () => {
       <div className='flex items-center'>
         <Link href='/'>
           <div className='text-lg font-bold text-white uppercase'>
-            Clerk App
+            BaliJava Spirit
           </div>
         </Link>
         <div>
@@ -37,9 +37,17 @@ const Header = async () => {
           </>
         )}
         {userId && (
+          <div>
           <Link href='profile' className='text-gray-300 hover:text-white mr-4'>
             Profile
           </Link>
+          <Link href='dashboard' className='text-gray-300 hover:text-white mr-4'>
+            DashBoard
+          </Link>
+          <Link href='forms' className='text-gray-300 hover:text-white mr-4'>
+            Forms
+          </Link>
+          </div>
         )}
         <div className='ml-auto'>
           <UserButton afterSignOutUrl='/' />
